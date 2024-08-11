@@ -1,1 +1,123 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekströms Mums</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="/js/renderdata.js" type="module"></script>
+  </head>
+  <body>
+    <div class="root">
+      <header>
+          <div class="spacer-header wavy-header"></div>
+
+          <div class="header-element">
+            <a class="header-title" href="index.html">
+              Ekströms Mums
+              <!--<img src="images/logga-header.svg" alt="En glad kock med en slev i höger hand och en slickepott i vänster hand." width="256">-->
+            </a>
+            <nav class="header-nav">
+              <ul class="button-list">
+                <li class="button"><a href="html/meny.html" class="button-link white-button">Meny</a></li>
+                <li class="button"><a href="html/boka.html" class="button-link white-button">Boka bord</a></li>
+                <li class="button"><a href="html/kontakt.html#hitta" class="button-link white-button">Hitta hit</a></li>
+                <li class="button"><a href="html/om_oss.html" class="button-link white-button">Om oss</a></li>
+                <li class="button"><a href="html/recept.html" class="button-link white-button">Recept</a></li>
+              </ul>
+            </nav>
+        </div>  
+      </header>
+
+      <main>
+        <div class="main-wrapper">
+          <div class="">
+            <article id="slogan" class="main-element">
+              <h1>Välkommen till Ekströms Mums!</h1>
+              <section>
+                <p>
+                  Ekströms Mums är en hyllningsresturang till Ekströms alla goda produkter. All vår mat innehåller åtminstone en ingrediens från Ekströms sortiment.
+                </p>
+
+                <strong id="prognos">Väderprognos check!</strong>
+                <div id="weather-container">
+                  <div id="weather">
+                    <img id="weather-icon" src="" alt="Nuvarande vädersymbol" style="width: 100px; height: 100px;">
+                    <p id="temperature"></p>
+                  </div>
+                    <p id="weather-message"></p>
+                </div>
+
+                <ul class="button-list">
+                  <li class="button"><a class="button-link red-button" href="html/boka.html">Boka bord<a></li>
+                  <li class="button"><a class="button-link red-button" href="html/kontakt.html">Kontakta<a></li>
+                </ul>
+              </section>
+            </article>
+          </div>
+          
+          <div class="spacer wavy-top"></div>
+
+          <div class="red">
+            <article id="inspirationsrecept" class="main-element grid">
+              <div>
+                <img src="images/ratter/specialratter/blabars-wasabikram.webp" alt="Blåbärs- och Wasabikräm med Karamelliserad Blomkål." width="256">
+              </div>
+              <div>
+                <section>
+                  <h2>Ekströms Mums inspirationsrecept</h2>
+                <p>
+                  På Ekströms Mums är alla recept inspirerade av produkter från Ekströms sortiment. Under sidan Recept har vi samlat några av våra favoriter som är enkla att pröva hemma tillsammans med barnen eller sambon. Recepten kräver inga större förkunskaper utan ska enkelt gå att följa med hjälp av vår steg-för-steg guide.
+                </p>
+                <ul class="button-list">
+                  <li class="button"><a class="button-link white-button" href="html/recept.html">Utforska våra recept</a></li> 
+                </ul>
+                </section>
+              </div> 
+            </article>
+          </div>
+          
+          <div class="spacer wavy-bottom"></div>
+
+          <div class="">
+            <article id="varhistoria" class="main-element">
+              <h2>Vår historia</h2>
+              <section>
+                <p>
+                  Ekströms Mums föddes ur en kärlek till familjens samlade matminnen och en passion för lekfull kreativitet i köket. Med en vision att skapa goda maträtter som kittlar både barnasinnet och smaklökarna, har vi samlat Ekströms finaste ingredienser och låtit fantasin flöda.
+                </p>
+                <ul class="button-list">
+                  <li class="button"><a class="button-link red-button" href="html/om_oss.html">Läs mer om vår historia</a></li>
+                </ul>
+              </section>
+            </article>
+          </div>
+          
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer-element">
+          <div>
+            <p>&copy; 2024 Ekströms Mums. All rights reserved.</p>
+            <a href="html/meny.html">Meny</a>
+            <a href="html/kontakt.html">Kontakta oss</a>
+            <a href="html/kontakt.html#hitta">Hitta oss</a>
+          </div>
+
+          <a class="center-logo" href="index.html">
+            <img src="images/logga.svg" alt="En glad kock med en slev i höger hand och en slickepott i vänster hand." width="128">
+          </a>
+
+          <div>
+              <p>Adress: Granhäcksvägen 14, Surte, Västra Götaland, 445 55</p>
+              <p>Telefon: (+46)70-257 57 43</p>
+              <p>Epostadress: <a href="mailto:info@mums.se">info@mums.se</a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,499 @@
+/* FONTS AND COLOURS */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Yeseva+One&display=swap');
+
+:root {
+  --color-primary: #e5271d;   
+  --color-secondary: #ffe878; 
+  --color-background: #FFF9E2;
+  --color-text: #080808;     
+}
+
+.red {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.red h1, .red h2, .red h3, .red a, .red p{
+  color: white;
+}
+
+
+/* Typografi */
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font: 100%/1.6 "Josefin Sans", sans-serif;
+}
+
+p, span, a {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+strong {
+  font-weight: 600;
+}
+
+h1, h2, h3 {
+  font-family: "Yeseva One", serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.986rem;
+}
+
+h2 {
+  font-size: 2.488rem;
+}
+
+h3 {
+  font-size: 2.074rem;
+}
+
+/* PAGE SETTINGS */
+
+.header-element, .footer-element { 
+  max-width: 1280px;
+  
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.main-element {
+  max-width: 920px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+}
+
+.red-button {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.white-button {
+  background-color: white;
+  color: var(--color-primary) !important;
+}
+
+.button-list {
+  display: flex;
+  flex-flow: row;
+  gap: 2rem;
+}
+
+.button {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.button-link {
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1;
+
+  padding: .8rem 1.5rem;
+  border-radius: .8rem;
+  cursor: pointer;
+
+  /* Transition */
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.button-link:hover {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-background);
+}
+
+.button:hover a {
+  color: white !important;
+}
+
+.left a, .left p{
+  text-align: right;
+}
+
+.wavy-top {
+  background-image: url('../images/wave-top.svg');
+}
+
+.wavy-bottom {
+  background-image: url('../images/wave-bottom.svg');
+}
+
+.spacer {
+  aspect-ratio: 960/196;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+}
+
+.grid div{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.grid div img {
+	max-width: 100%;
+	width: auto;
+	border-radius: .8rem;
+	align-self: center;
+	margin: 1rem 0;
+}
+
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10; 
+}
+
+.spacer-header {
+  aspect-ratio: 960/192;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  z-index: 2; 
+  height: 13rem; 
+}
+
+.wavy-header {
+  background-image: url('../images/wave-header.svg');
+}
+
+.header-title {
+  font: 2.5rem "Yeseva One", serif;
+  color: white;
+  text-decoration: none;
+}
+
+.header-element { 
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  height: 9rem;
+  position: relative;
+  z-index: 2; 
+  background-color: transparent;
+
+  margin-bottom: 4rem;
+}
+
+.header-nav {
+  display: flex;
+  height: 100%;
+  margin-left: auto;
+  align-items: center;
+}
+
+
+/* FOOTER */
+
+.footer-element {
+  display: flex;
+  flex-direction: row;
+  align-items: start; 
+  height: 12rem;
+}
+
+.footer-element div {
+  display: flex;
+  flex-direction: column;
+  max-width: 16rem;
+  padding: 0 4rem;
+}
+
+.center-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-logo img {
+  width: 100%;
+  max-width: 12rem; 
+  min-width: 10rem;
+  height: auto;
+}
+
+
+
+/* STARTSIDA */
+
+#slogan, #slogan section, #varhistoria, #varhistoria section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#slogan p, #varhistoria p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#slogan strong {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#weather {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#weather-container p {
+  margin: 0;
+}
+
+#slogan .button-list, #varhistoria .button-list {
+  padding-top: 2rem;
+  gap: 1rem;
+}
+
+#inspirationsrecept .button-list{
+  padding-top: 1rem;
+  gap: 0;
+}
+
+/* MENY/SPECIALMENY */
+
+.meny {
+  align-items: start;
+}
+
+.meny .button-list{
+  padding-top: 1rem;
+  gap: 0;
+}
+
+.meny section {
+  padding-bottom: 4rem;
+}
+
+/* BOKA */
+
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .field {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group {
+  margin-bottom: 15px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form input[type="date"],
+.form input[type="time"],
+.form input[type="number"],
+.form textarea {
+  max-width: 100%;
+  padding: 1rem;
+  margin-top: .5rem;
+  border: 1px solid #ccc;
+  border-radius: .8rem;
+  color: var(--color-text);
+  font: 100%/1.6 "Josefin Sans", sans-serif;
+}
+
+.form textarea {
+  max-height: 2rem;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #ccc;
+}
+
+.form div:nth-of-type(4) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form div:nth-of-type(4) label,
+.form div:nth-of-type(4) input {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.form div:nth-of-type(4) label:last-of-type,
+.form div:nth-of-type(4) input:last-of-type {
+  margin-right: 0;
+}
+
+.form input[type="submit"] {
+  text-decoration: none;
+  font-weight: 600;
+  font: 100%/1 "Josefin Sans", sans-serif;
+
+  padding: 1rem 1.5rem;
+  border-radius: .8rem;
+  cursor: pointer;
+
+  margin-top: 1rem;
+
+  background-color: var(--color-primary);
+  color: white;
+
+  /* Transition */
+  border: 2px solid red;
+  transition: all 0.3s ease;
+}
+
+.form input[type="submit"]:hover {
+  border: 2px solid var(--color-background);
+}
+
+/* KONTAKT */
+#kontakt {
+  align-items: start;
+}
+
+#kontakt section {
+  margin-bottom: 2rem;
+}
+
+#kontakt section p {
+  margin-bottom: 1rem;
+}
+
+/* OM OSS */
+#historien p {
+  margin-bottom: 1.5rem;
+}
+
+#historien img {
+  max-width: 100%;
+  border-radius: .8rem;
+}
+
+/* RECEPT */
+#recept section {
+  margin-bottom: 2rem;
+}
+
+#recept a {
+  text-decoration: none;
+}
+
+.recipe-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.recipe-container {
+  position: relative;
+}
+
+.recipe-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.grid .recipe-container img {
+  margin: 0;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 0));
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: left;
+  border-radius: .8rem;
+}
+
+.text-overlay p {
+  margin: 0;
+  color: white;
+}
+
+/* RECEPT SIDA */
+.recept-page {
+  align-items: start;
+}
+
+
+.recept-page .grid div {
+  justify-content: start;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.recept-page img {
+  max-width: 100%;
+  width: 100%;
+  max-height: 24rem;
+  object-fit: cover;
+  border-radius: .8rem;
+  object-position: bottom;
+}
+
+.recept-page ol {
+  list-style-type: decimal;
+  margin-left: 1.5rem; 
+}
+
+.recept-page ul {
+  list-style-type: disc; 
+  margin-left: 1.5rem; 
+}
+
+
+
+
+
+
+
+
+
+
+

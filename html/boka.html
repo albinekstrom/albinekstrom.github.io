@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekströms Mums</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  
+  <body>
+    <div class="root">
+      <header>
+        <div class="spacer-header wavy-header"></div>
+
+        <div class="header-element">
+          <a class="header-title" href="/index.html">
+            Ekströms Mums
+            <!--<img src="images/logga-header.svg" alt="En glad kock med en slev i höger hand och en slickepott i vänster hand." width="256">-->
+          </a>
+          <nav class="header-nav">
+            <ul class="button-list">
+              <li class="button"><a href="/html/meny.html" class="button-link white-button">Meny</a></li>
+              <li class="button"><a href="/html/boka.html" class="button-link white-button">Boka bord</a></li>
+              <li class="button"><a href="/html/kontakt.html#hitta" class="button-link white-button">Hitta hit</a></li>
+              <li class="button"><a href="/html/om_oss.html" class="button-link white-button">Om oss</a></li>
+              <li class="button"><a href="/html/recept.html" class="button-link white-button">Recept</a></li>
+            </ul>
+          </nav>
+        </div>  
+      </header>
+
+      <main>
+        <article class="main-element">
+          <section id="boka">
+            <div>
+              <h1>Boka bord hos Ekströms Mums</h1>
+            </div>
+            <div class="form">
+              <form action="/submit" method="post">
+                <div class="field">
+                  <input type="text" id="name" name="name" placeholder="Namn" required>
+                </div>
+                
+                <div class="field">
+                  <input type="email" id="email" name="email" placeholder="E-post" required>
+                </div>
+          
+                <div class="field">
+                  <input type="tel" id="phone" name="phone" placeholder="Telefonnummer" required>
+                </div>
+          
+                <div class="field-group">
+                  <input type="date" id="date" name="date" required>
+                  <input type="time" id="time" name="time" required>
+                  <input type="number" id="guests" name="guests" min="1" max="20" placeholder="Antal Gäster" required>
+                </div>
+          
+                <div class="field">
+                  <textarea id="message" name="message" rows="4" cols="50" placeholder="Önskemål"></textarea>
+                </div>
+                
+                <input type="submit" value="Boka Bord">
+              </form>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <footer>
+        <div class="footer-element">
+          <div>
+            <p>&copy; 2024 Ekströms Mums. All rights reserved.</p>
+            <a href="/html/meny.html">Meny</a>
+            <a href="/html/kontakt.html">Kontakta oss</a>
+            <a href="/html/kontakt.html#hitta">Hitta oss</a>
+          </div>
+
+          <a class="center-logo" href="/index.html">
+            <img src="/images/logga.svg" alt="En glad kock med en slev i höger hand och en slickepott i vänster hand." width="128">
+          </a>
+
+          <div>
+              <p>Adress: Granhäcksvägen 14, Surte, Västra Götaland, 445 55</p>
+              <p>Telefon: (+46)70-257 57 43</p>
+              <p>Epostadress: <a href="mailto:info@mums.se">info@mums.se</a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
