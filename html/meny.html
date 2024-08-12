@@ -1,37 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ekströms Mums</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/js/menu.js" type="module"></script>
   </head>
 
   <body>
     <div id="root">
         <header>
             <div class="spacer-header wavy-header"></div>
-  
             <div class="header-element">
-              <a class="header-title" href="/index.html">
-                Ekströms Mums
-                <!--<img src="images/logga-header.svg" alt="En glad kock med en slev i höger hand och en slickepott i vänster hand." width="256">-->
-              </a>
-              <nav class="header-nav">
+                <a class="header-title" href="/index.html">Ekströms Mums</a>
+                <nav class="header-nav">
                 <ul class="button-list">
-                  <li class="button"><a href="/html/meny.html" class="button-link white-button">Meny</a></li>
-                  <li class="button"><a href="/html/boka.html" class="button-link white-button">Boka bord</a></li>
-                  <li class="button"><a href="/html/kontakt.html#hitta" class="button-link white-button">Hitta hit</a></li>
-                  <li class="button"><a href="/html/om_oss.html" class="button-link white-button">Om oss</a></li>
-                  <li class="button"><a href="/html/recept.html" class="button-link white-button">Recept</a></li>
+                    <li class="button"><a href="/html/meny.html" class="button-link white-button">Meny</a></li>
+                    <li class="button"><a href="/html/boka.html" class="button-link white-button">Boka bord</a></li>
+                    <li class="button"><a href="/html/kontakt.html#hitta" class="button-link white-button">Hitta hit</a></li>
+                    <li class="button"><a href="/html/om_oss.html" class="button-link white-button">Om oss</a></li>
+                    <li class="button"><a href="/html/recept.html" class="button-link white-button">Recept</a></li>
                 </ul>
-              </nav>
-          </div>  
-        </header>
+                </nav>
+                <div class="menu-icon">
+                <img src="/images/menu.png" alt="Menu Icon">
+                </div>
+            </div>
+            <div class="overlay" id="overlay">
+                <nav class="overlay-nav">
+                <ul class="overlay-button-list">
+                    <li class=""><a href="/html/meny.html" class="">Meny</a></li>
+                    <li class=""><a href="/html/boka.html" class="">Boka bord</a></li>
+                    <li class=""><a href="/html/kontakt.html#hitta" class="">Hitta hit</a></li>
+                    <li class=""><a href="/html/om_oss.html" class="">Om oss</a></li>
+                    <li class=""><a href="/html/recept.html" class="">Recept</a></li>
+                </ul>
+                </nav>
+            </div>
+            </header>
 
       <main>
-        <article class="main-element meny">
+        <div class="main-element-left meny">
             <section>
                 <h1>Månadens meny</h1>
                 <p>
@@ -49,17 +61,17 @@
                     <div>
                         <p>Äpplekräm med Rökt Ankbröst och Ruccola<br>
                         <strong>Innehåller:</strong> Ekströms Äpplekräm Extra Prima</p>
-                        <img src="/images/ratter/forratter/applekram-ankbrost.webp" alt="Äpplekräm med Rökt Ankbröst och Ruccola upplagd på en rustik tallrik" height="256">
+                        <img src="/images/ratter/forratter/applekram-ankbrost.webp" alt="Äpplekräm med Rökt Ankbröst och Ruccola upplagd på en rustik tallrik" >
                     </div>
                     <div>
                         <p>Krämig Morotssoppa med Aprikos<br>
                         <strong>Innehåller:</strong> Ekströms Aprikoskräm Orginal</p>
-                        <img src="/images/ratter/forratter/morotssoppa-aprikos.webp" alt="Krämig Morotssoppa med Aprikos upplagd på en rustik tallrik" height="256">
+                        <img src="/images/ratter/forratter/morotssoppa-aprikos.webp" alt="Krämig Morotssoppa med Aprikos upplagd på en rustik tallrik" >
                     </div>
                     <div>
                         <p>Blåbärskräm med Getost och Rostade Nötter<br>
                         <strong>Innehåller:</strong> Ekströms Blåbärskräm Extra Prima</p>
-                        <img src="/images/ratter/forratter/blabarskram-getost.webp" alt="Blåbärskräm med Getost och Rostade Nötter upplagd på en rustik tallrik" height="256">
+                        <img src="/images/ratter/forratter/blabarskram-getost.webp" alt="Blåbärskräm med Getost och Rostade Nötter upplagd på en rustik tallrik" >
                     </div>
                 </div>
             </section>
@@ -70,27 +82,27 @@
                     <div>
                         <p>Kyckling med Brylépuddingsås och Rostade Grönsaker<br>
                         <strong>Innehåller:</strong> Ekströms Brylépudding med Karamellsås</p>
-                        <img src="/images/ratter/huvudratter/kyckling-brylepuddingsas.webp" alt="Kyckling med Brylépuddingsås och Rostade Grönsaker upplagd på en rustik tallrik" height="256">
+                        <img src="/images/ratter/huvudratter/kyckling-brylepuddingsas.webp" alt="Kyckling med Brylépuddingsås och Rostade Grönsaker upplagd på en rustik tallrik" >
                     </div>
                     <div>
                         <p>Lax med Citronfromage och Dillpotatis<br>
                         <strong>Innehåller:</strong> Ekströms Citronfromage</p>
-                        <img src="/images/ratter/huvudratter/lax-citronfromage.webp" alt="Lax med Citronfromage och Dillpotatis upplagd på en rustik tallrik" height="256">
+                        <img src="/images/ratter/huvudratter/lax-citronfromage.webp" alt="Lax med Citronfromage och Dillpotatis upplagd på en rustik tallrik" >
                     </div>
                     <div>
                         <p>Vildsvinsgryta med Blåbärssås<br>
                         <strong>Innehåller:</strong> Ekströms Blåbärssoppa Orginal</p>
-                        <img src="/images/ratter/huvudratter/vildsvinsgryta-blabarssas.webp" alt="Vildsvinsgryta med Blåbärssås upplagd på en rustik tallrik" height="256">
+                        <img src="/images/ratter/huvudratter/vildsvinsgryta-blabarssas.webp" alt="Vildsvinsgryta med Blåbärssås upplagd på en rustik tallrik" >
                     </div>
                     <div>
                         <p>Fläskfilé med Chokladmoussekryddad Sås och Rödvinssås<br>
                         <strong>Innehåller:</strong> Ekströms Chokladmousse med Crisp</p>
-                        <img src="/images/ratter/huvudratter/flaskfile-chokladmoussekryddad-sas.webp" alt="Fläskfilé med Chokladmoussekryddad Sås och Rödvinssås upplagd på en rustik tallrik" height="256">
+                        <img src="/images/ratter/huvudratter/flaskfile-chokladmoussekryddad-sas.webp" alt="Fläskfilé med Chokladmoussekryddad Sås och Rödvinssås upplagd på en rustik tallrik" >
                     </div>
                     <div>
                         <p>Vegetarisk Risotto med Aprikos och Parmesan<br>
                         <strong>Innehåller:</strong> Ekströms Aprikoskräm Orginal</p>
-                        <img src="/images/ratter/huvudratter/risotto-aprikos-parmesan.webp" alt="Vegetarisk Risotto med Aprikos och Parmesan upplagd på en rustik tallrik" height="256">
+                        <img src="/images/ratter/huvudratter/risotto-aprikos-parmesan.webp" alt="Vegetarisk Risotto med Aprikos och Parmesan upplagd på en rustik tallrik" >
                     </div>
                 </div>
             </section>
@@ -101,12 +113,12 @@
                     <div>
                         <p>Chokladmousse med Krisp och Färska Bär<br>
                         <strong>Innehåller:</strong> Ekströms Chokladmousse med Crisp</p>
-                        <img src="/images/ratter/efterratter/chokladmousse-kisp-bar.webp" alt="Chokladmousse med Krisp och Färska Bär" height="256">
+                        <img src="/images/ratter/efterratter/chokladmousse-kisp-bar.webp" alt="Chokladmousse med Krisp och Färska Bär" >
                     </div>
                     <div>
                         <p>Citronfromage med Hallon och Citronmeliss<br>
                         <strong>Innehåller:</strong> Ekströms Citronfromage</p>
-                        <img src="/images/ratter/efterratter/citronfromage-hallon.webp" alt="Citronfromage med Hallon och Citronmeliss" height="256">
+                        <img src="/images/ratter/efterratter/citronfromage-hallon.webp" alt="Citronfromage med Hallon och Citronmeliss" >
                     </div>
                 </div>
             </section>
@@ -117,16 +129,16 @@
                     <div>
                         <p>Pannkakor med Blåbärssoppa och Grädde<br>
                         <strong>Innehåller:</strong> Ekströms Blåbärssoppa Orginal</p>
-                        <img src="/images/ratter/barnratter/pannkakor-blabarssoppa.webp" alt="Pannkakor med Blåbärssoppa och Grädde" height="256">
+                        <img src="/images/ratter/barnratter/pannkakor-blabarssoppa.webp" alt="Pannkakor med Blåbärssoppa och Grädde" >
                     </div>
                     <div>
                         <p>Makaroner med Kyckling och Äpplekräm<br>
                         <strong>Innehåller:</strong> Ekströms Äpplekräm Extra Prima</p>
-                        <img src="/images/ratter/barnratter/makaroner-kyckling-applekram.webp" alt="Makaroner med Kyckling och Äpplekräm" height="256">
+                        <img src="/images/ratter/barnratter/makaroner-kyckling-applekram.webp" alt="Makaroner med Kyckling och Äpplekräm" >
                     </div>
                 </div>
             </section>
-        </article>
+        </div>
       </main>
 
       <footer>

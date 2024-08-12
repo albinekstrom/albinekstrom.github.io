@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ekströms Mums</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/js/menu.js" type="module"></script>
   </head>
   
   <body>
     <div id="root">
       <header>
         <div class="spacer-header wavy-header"></div>
-
         <div class="header-element">
-          <a class="header-title" href="/index.html">
-            Ekströms Mums
-            <!--<img src="images/logga-header.svg" alt="En glad kock med en slev i höger hand och en slickepott i vänster hand." width="256">-->
-          </a>
+          <a class="header-title" href="/index.html">Ekströms Mums</a>
           <nav class="header-nav">
             <ul class="button-list">
               <li class="button"><a href="/html/meny.html" class="button-link white-button">Meny</a></li>
@@ -27,13 +25,27 @@
               <li class="button"><a href="/html/recept.html" class="button-link white-button">Recept</a></li>
             </ul>
           </nav>
-        </div>  
+          <div class="menu-icon">
+            <img src="/images/menu.png" alt="Menu Icon">
+          </div>
+        </div>
+        <div class="overlay" id="overlay">
+          <nav class="overlay-nav">
+            <ul class="overlay-button-list">
+              <li class=""><a href="/html/meny.html" class="">Meny</a></li>
+              <li class=""><a href="/html/boka.html" class="">Boka bord</a></li>
+              <li class=""><a href="/html/kontakt.html#hitta" class="">Hitta hit</a></li>
+              <li class=""><a href="/html/om_oss.html" class="">Om oss</a></li>
+              <li class=""><a href="/html/recept.html" class="">Recept</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <main>
-        <article id="historien" class="main-element">
-            <h1>Historien om Ekströms Mums - en lekfull matresa</h1>
+        <div id="historien" class="main-element-left">
             <section>
+              <h1>Historien om Ekströms Mums - en lekfull matresa</h1>
               <p>
                 Ekströms Mums startade som en hyllning till Ekströms fantastiska produkter. Grundaren Anna Ekström växte upp i ett hem där många av Ekströms produkter ofta användes, tack vare hennes farfar som arbetade på fabriken som tillverkade de älskade produkterna.
               </p>
@@ -52,7 +64,7 @@
             </section>
             
             <img src="/images/ekstroms.webp" alt="Ett kort inifrån Ekströms Mums där Anna, hennes tre söner och syster som uppradade för att välkomna gästerna med ett leende.">
-        </article>        
+        </div>        
       </main>
 
       <footer>

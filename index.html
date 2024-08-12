@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,35 +8,46 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="/js/renderdata.js" type="module"></script>
+    <script src="js/menu.js" type="module"></script>
   </head>
   <body>
     <div class="root">
       <header>
-          <div class="spacer-header wavy-header"></div>
-
-          <div class="header-element">
-            <a class="header-title" href="index.html">
-              Ekströms Mums
-              <!--<img src="images/logga-header.svg" alt="En glad kock med en slev i höger hand och en slickepott i vänster hand." width="256">-->
-            </a>
-            <nav class="header-nav">
-              <ul class="button-list">
-                <li class="button"><a href="html/meny.html" class="button-link white-button">Meny</a></li>
-                <li class="button"><a href="html/boka.html" class="button-link white-button">Boka bord</a></li>
-                <li class="button"><a href="html/kontakt.html#hitta" class="button-link white-button">Hitta hit</a></li>
-                <li class="button"><a href="html/om_oss.html" class="button-link white-button">Om oss</a></li>
-                <li class="button"><a href="html/recept.html" class="button-link white-button">Recept</a></li>
-              </ul>
-            </nav>
-        </div>  
+        <div class="spacer-header wavy-header"></div>
+        <div class="header-element">
+          <a class="header-title" href="/index.html">Ekströms Mums</a>
+          <nav class="header-nav">
+            <ul class="button-list">
+              <li class="button"><a href="/html/meny.html" class="button-link white-button">Meny</a></li>
+              <li class="button"><a href="/html/boka.html" class="button-link white-button">Boka bord</a></li>
+              <li class="button"><a href="/html/kontakt.html#hitta" class="button-link white-button">Hitta hit</a></li>
+              <li class="button"><a href="/html/om_oss.html" class="button-link white-button">Om oss</a></li>
+              <li class="button"><a href="/html/recept.html" class="button-link white-button">Recept</a></li>
+            </ul>
+          </nav>
+          <div class="menu-icon">
+            <img src="/images/menu.png" alt="Menu Icon">
+          </div>
+        </div>
+        <div class="overlay" id="overlay">
+          <nav class="overlay-nav">
+            <ul class="overlay-button-list">
+              <li class=""><a href="/html/meny.html" class="">Meny</a></li>
+              <li class=""><a href="/html/boka.html" class="">Boka bord</a></li>
+              <li class=""><a href="/html/kontakt.html#hitta" class="">Hitta hit</a></li>
+              <li class=""><a href="/html/om_oss.html" class="">Om oss</a></li>
+              <li class=""><a href="/html/recept.html" class="">Recept</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <main>
-        <div class="main-wrapper">
+        <div id="startsida" class="main-wrapper">
           <div class="">
-            <article id="slogan" class="main-element">
-              <h1>Välkommen till Ekströms Mums!</h1>
+            <div id="slogan" class="main-element-center">
               <section>
+                <h1>Välkommen till Ekströms Mums!</h1>
                 <p>
                   Ekströms Mums är en hyllningsresturang till Ekströms alla goda produkter. All vår mat innehåller åtminstone en ingrediens från Ekströms sortiment.
                 </p>
@@ -44,47 +55,49 @@
                 <strong id="prognos">Väderprognos check!</strong>
                 <div id="weather-container">
                   <div id="weather">
-                    <img id="weather-icon" src="" alt="Nuvarande vädersymbol" style="width: 100px; height: 100px;">
+                    <img id="weather-icon" src="/images/clouds.png" alt="Nuvarande vädersymbol">
                     <p id="temperature"></p>
                   </div>
                     <p id="weather-message"></p>
                 </div>
-
+              
                 <ul class="button-list">
-                  <li class="button"><a class="button-link red-button" href="html/boka.html">Boka bord<a></li>
-                  <li class="button"><a class="button-link red-button" href="html/kontakt.html">Kontakta<a></li>
+                  <li class="button"><a class="button-link red-button" href="html/boka.html">Boka bord</a></li>
+                  <li class="button"><a class="button-link red-button" href="html/kontakt.html">Kontakta</a></li>
                 </ul>
               </section>
-            </article>
+            </div>
           </div>
           
           <div class="spacer wavy-top"></div>
 
           <div class="red">
-            <article id="inspirationsrecept" class="main-element grid">
-              <div>
-                <img src="images/ratter/specialratter/blabars-wasabikram.webp" alt="Blåbärs- och Wasabikräm med Karamelliserad Blomkål." width="256">
+            <div class="main-element-center ">
+              <div id="inspiration" class="grid">
+                <div>
+                  <img src="images/ratter/specialratter/blabars-wasabikram.webp" alt="Blåbärs- och Wasabikräm med Karamelliserad Blomkål." width="256">
+                </div>
+                <div>
+                  <section id="inspirationsrecept">
+                    <h2>Ekströms Mums inspirationsrecept</h2>
+                    <p>
+                      På Ekströms Mums är alla recept inspirerade av produkter från Ekströms sortiment. Under sidan Recept har vi samlat några av våra favoriter som är enkla att pröva hemma tillsammans med barnen eller sambon. Recepten kräver inga större förkunskaper utan ska enkelt gå att följa med hjälp av vår steg-för-steg guide.
+                    </p>
+                    <ul class="button-list">
+                      <li class="button"><a class="button-link white-button" href="html/recept.html">Utforska våra recept</a></li> 
+                    </ul>
+                  </section>
+                </div>
               </div>
-              <div>
-                <section>
-                  <h2>Ekströms Mums inspirationsrecept</h2>
-                <p>
-                  På Ekströms Mums är alla recept inspirerade av produkter från Ekströms sortiment. Under sidan Recept har vi samlat några av våra favoriter som är enkla att pröva hemma tillsammans med barnen eller sambon. Recepten kräver inga större förkunskaper utan ska enkelt gå att följa med hjälp av vår steg-för-steg guide.
-                </p>
-                <ul class="button-list">
-                  <li class="button"><a class="button-link white-button" href="html/recept.html">Utforska våra recept</a></li> 
-                </ul>
-                </section>
-              </div> 
-            </article>
+            </div>
           </div>
           
           <div class="spacer wavy-bottom"></div>
 
           <div class="">
-            <article id="varhistoria" class="main-element">
-              <h2>Vår historia</h2>
+            <div id="varhistoria" class="main-element-center">
               <section>
+                <h2>Vår historia</h2>
                 <p>
                   Ekströms Mums föddes ur en kärlek till familjens samlade matminnen och en passion för lekfull kreativitet i köket. Med en vision att skapa goda maträtter som kittlar både barnasinnet och smaklökarna, har vi samlat Ekströms finaste ingredienser och låtit fantasin flöda.
                 </p>
@@ -92,9 +105,8 @@
                   <li class="button"><a class="button-link red-button" href="html/om_oss.html">Läs mer om vår historia</a></li>
                 </ul>
               </section>
-            </article>
+            </div>
           </div>
-          
         </div>
       </main>
 

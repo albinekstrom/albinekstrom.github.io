@@ -66,13 +66,12 @@ h3 {
   padding-right: 2rem;
 }
 
-.main-element {
+.main-element-center, .main-element-left {
   max-width: 920px;
 
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   margin-left: auto;
   margin-right: auto;
@@ -82,6 +81,23 @@ h3 {
   padding-top: 4rem;
   padding-bottom: 8rem;
 }
+
+.main-element-center section, .main-element-left section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-bottom: 1rem;
+}
+
+.main-element-center, .main-element-center section {
+  align-items: center;
+}
+
+.main-element-left, .main-element-left section {
+  align-items: start;
+}
+
 
 .red-button {
   background-color: var(--color-primary);
@@ -96,7 +112,7 @@ h3 {
 .button-list {
   display: flex;
   flex-flow: row;
-  gap: 2rem;
+  column-gap: 2rem;
 }
 
 .button {
@@ -128,10 +144,6 @@ h3 {
   color: white !important;
 }
 
-.left a, .left p{
-  text-align: right;
-}
-
 .wavy-top {
   background-image: url('../images/wave-top.svg');
 }
@@ -153,17 +165,20 @@ h3 {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 2rem;
+  width: 100%;
+  max-width: 100%;
 }
 
-.grid div{
+.grid div, .grid section{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+  max-width: 100%;
 }
 
-.grid div img {
+.grid div img, .grid section img{
 	max-width: 100%;
-	width: auto;
+	width: 100%;
 	border-radius: .8rem;
 	align-self: center;
 	margin: 1rem 0;
@@ -219,6 +234,47 @@ header {
   align-items: center;
 }
 
+/* Menyikon inställningar */
+.menu-icon {
+  display: none;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.menu-icon img {
+  height: 100%; 
+  max-height: 4rem; 
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  display: none; /* Initialt gömd */
+  z-index: 999;
+  justify-content: center; 
+  align-items: center;
+  overflow: hidden;
+}
+
+.overlay-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay-button-list .button {
+  margin: 1.5rem 0;
+}
+
+.overlay-button-list a {
+  color: white;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
 
 /* FOOTER */
 
@@ -226,6 +282,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: start; 
+  justify-content: space-between;
   height: 12rem;
 }
 
@@ -254,22 +311,13 @@ header {
 
 /* STARTSIDA */
 
-#slogan, #slogan section, #varhistoria, #varhistoria section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#slogan p, #varhistoria p {
+#slogan p, #slogan strong, #varhistoria p {
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
 }
 
-#slogan strong {
+#slogan h1, #varhistoria h2 {
   text-align: center;
-  font-size: 1.5rem;
 }
 
 #weather {
@@ -283,36 +331,41 @@ header {
   margin: 0;
 }
 
-#slogan .button-list, #varhistoria .button-list {
-  padding-top: 2rem;
+#weather-icon {
+  max-height: 8rem;
+}
+
+#startsida .button-list {
+  margin-top: 1rem;
   gap: 1rem;
 }
 
-#inspirationsrecept .button-list{
-  padding-top: 1rem;
+#inspiration {
+  justify-content: center;
+  align-items: center;
+}
+
+#inspirationsrecept {
+  align-items: start;
+}
+
+#inspirationsrecept .button-list {
   gap: 0;
 }
 
 /* MENY/SPECIALMENY */
-
-.meny {
-  align-items: start;
-}
 
 .meny .button-list{
   padding-top: 1rem;
   gap: 0;
 }
 
-.meny section {
-  padding-bottom: 4rem;
-}
-
 /* BOKA */
-
-.form form {
+.form, .form form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
 }
 
 .form .field {
@@ -322,6 +375,8 @@ header {
 }
 
 .field-group {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 15px;
 }
 
@@ -331,10 +386,8 @@ header {
 .form input[type="date"],
 .form input[type="time"],
 .form input[type="number"],
-.form textarea {
-  max-width: 100%;
+.form textarea { 
   padding: 1rem;
-  margin-top: .5rem;
   border: 1px solid #ccc;
   border-radius: .8rem;
   color: var(--color-text);
@@ -350,19 +403,12 @@ header {
   color: #ccc;
 }
 
-.form div:nth-of-type(4) {
-  display: flex;
-  justify-content: space-between;
-}
-
-.form div:nth-of-type(4) label,
-.form div:nth-of-type(4) input {
+.field-group input {
   flex: 1;
   margin-right: 1rem;
 }
 
-.form div:nth-of-type(4) label:last-of-type,
-.form div:nth-of-type(4) input:last-of-type {
+.field-group input:last-of-type {
   margin-right: 0;
 }
 
@@ -374,8 +420,6 @@ header {
   padding: 1rem 1.5rem;
   border-radius: .8rem;
   cursor: pointer;
-
-  margin-top: 1rem;
 
   background-color: var(--color-primary);
   color: white;
@@ -389,17 +433,14 @@ header {
   border: 2px solid var(--color-background);
 }
 
+
 /* KONTAKT */
-#kontakt {
-  align-items: start;
-}
-
-#kontakt section {
-  margin-bottom: 2rem;
-}
-
 #kontakt section p {
   margin-bottom: 1rem;
+}
+
+#kontakt iframe {
+  max-width: 100%;
 }
 
 /* OM OSS */
@@ -412,18 +453,11 @@ header {
   border-radius: .8rem;
 }
 
-/* RECEPT */
-#recept section {
-  margin-bottom: 2rem;
-}
 
-#recept a {
-  text-decoration: none;
-}
+/* RECEPT */
 
 .recipe-link {
   text-decoration: none;
-  color: inherit;
 }
 
 .recipe-container {
@@ -433,7 +467,10 @@ header {
 .recipe-container img {
   display: block;
   max-width: 100%;
+  max-height: 24rem;
   height: auto;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 .grid .recipe-container img {
@@ -457,12 +494,8 @@ header {
 }
 
 /* RECEPT SIDA */
-.recept-page {
-  align-items: start;
-}
 
-
-.recept-page .grid div {
+.recept-page .grid section {
   justify-content: start;
   max-width: 100%;
   margin-bottom: 2rem;
@@ -488,12 +521,96 @@ header {
 }
 
 
+/* MEDIA */
+
+@media (max-width: 1200px) {
+  .header-nav {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  #startsida p, #startsida strong {
+    font-size: 1.2rem;
+  }
+
+  #startsida h1, .meny h1, #boka h1, #kontakt h1, #historien h1, #recept h1, .recept-page h1 {
+    font-size: 2rem;
+  }
+
+  #startsida h2, .meny h2, #kontakt h2, #recept h2, .recept-page h2 {
+    font-size: 1.8rem;
+  }
+
+  #weather-icon {
+    max-height: 6rem;
+  }
+}
 
 
 
+@media (max-width: 899px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 
+  .header-title {
+    font-size: 2rem;
+  }
 
+  .spacer-header {
+    height: 9rem;
+  }
 
+  .header-element {
+    margin-bottom: 0;
+  }
 
+  .menu-icon img {
+    max-height: 3rem;
+  }
 
+  .footer-element p, .footer-element a {
+    font-size: .8rem;
+  }
 
+  .footer-element .center-logo {
+    display: none;
+  }
+
+  .footer-element div {
+    padding: 0 1rem;
+  }
+
+  .main-element-center, .main-element-left {
+    padding-bottom: 2rem;
+  }
+
+  #startsida p, #startsida strong, .meny p {
+    font-size: 1rem;
+  }
+
+  #startsida h1, .meny h1, #boka h1, #kontakt h1, #historien h1, #recept h1, .recept-page h1 {
+    font-size: 1.8rem;
+  }
+
+  #startsida h2, .meny h2, #kontakt h2, #recept h2, .recept-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .field-group {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .field-group input {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  #weather-icon {
+    max-height: 4rem;
+  }
+}

@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ekströms Mums</title>
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="/js/menu.js" type="module"></script>
   </head>
   
   <body>
     <div id="root">
       <header>
         <div class="spacer-header wavy-header"></div>
-
         <div class="header-element">
-          <a class="header-title" href="/index.html">
-            Ekströms Mums
-            <!--<img src="images/logga-header.svg" alt="En glad kock med en slev i höger hand och en slickepott i vänster hand." width="256">-->
-          </a>
+          <a class="header-title" href="/index.html">Ekströms Mums</a>
           <nav class="header-nav">
             <ul class="button-list">
               <li class="button"><a href="/html/meny.html" class="button-link white-button">Meny</a></li>
@@ -27,11 +25,25 @@
               <li class="button"><a href="/html/recept.html" class="button-link white-button">Recept</a></li>
             </ul>
           </nav>
-        </div>  
+          <div class="menu-icon">
+            <img src="/images/menu.png" alt="Menu Icon">
+          </div>
+        </div>
+        <div class="overlay" id="overlay">
+          <nav class="overlay-nav">
+            <ul class="overlay-button-list">
+              <li class=""><a href="/html/meny.html" class="">Meny</a></li>
+              <li class=""><a href="/html/boka.html" class="">Boka bord</a></li>
+              <li class=""><a href="/html/kontakt.html#hitta" class="">Hitta hit</a></li>
+              <li class=""><a href="/html/om_oss.html" class="">Om oss</a></li>
+              <li class=""><a href="/html/recept.html" class="">Recept</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <main>
-        <article class="main-element recept-page">
+        <div class="main-element-left recept-page">
           <section>
             <h1>Recept: Choklad- och Brylépudding Parfait</h1>
             <p><strong>Innehåller:</strong> Ekströms Chokladmousse med Crisp och Ekströms Brylépudding med Karamellsås</p>
@@ -39,7 +51,7 @@
           </section>
 
           <div class="grid">
-            <div>
+            <section>
               <h2>Ingredienser</h2>
               <ul>
                   <li>1 förpackning Ekströms Chokladmousse med Crisp</li>
@@ -49,8 +61,8 @@
                   <li>Färska bär för garnering (valfritt)</li>
                   <li>Myntablad för garnering (valfritt)</li>
               </ul>
-          </div>
-          <div>
+          </section>
+          <section>
               <h2>Instruktioner</h2>
               <ol>
                   <li>Förbered Ekströms Chokladmousse med Crisp enligt anvisningarna på förpackningen. Vispa ner påsens innehåll i 2 dl kall mjölk och vispa med elvisp i 1-3 minuter tills moussen är fluffig.</li>
@@ -60,10 +72,10 @@
                   <li>Garnera med färska bär och myntablad om så önskas.</li>
                   <li>Servera omedelbart eller ställ i kylskåp tills det är dags att servera.</li>
               </ol>
-            </div>
+            </section>
           </div>
           <img src="/images/ratter/recept/choklad-brylepudding-parfait.webp" alt="Choklad- och Brylépudding Parfait upplagd på en tallrik i ett grönt kök" width="256">
-        </article>        
+        </div>        
       </main>
 
       <footer>

@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ekströms Mums</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/js/menu.js" type="module"></script>
   </head>
   
   <body>
     <div id="root">
       <header>
         <div class="spacer-header wavy-header"></div>
-
         <div class="header-element">
-          <a class="header-title" href="/index.html">
-            Ekströms Mums
-            <!--<img src="images/logga-header.svg" alt="En glad kock med en slev i höger hand och en slickepott i vänster hand." width="256">-->
-          </a>
+          <a class="header-title" href="/index.html">Ekströms Mums</a>
           <nav class="header-nav">
             <ul class="button-list">
               <li class="button"><a href="/html/meny.html" class="button-link white-button">Meny</a></li>
@@ -27,58 +25,72 @@
               <li class="button"><a href="/html/recept.html" class="button-link white-button">Recept</a></li>
             </ul>
           </nav>
-        </div>  
+          <div class="menu-icon">
+            <img src="/images/menu.png" alt="Menu Icon">
+          </div>
+        </div>
+        <div class="overlay" id="overlay">
+          <nav class="overlay-nav">
+            <ul class="overlay-button-list">
+              <li class=""><a href="/html/meny.html" class="">Meny</a></li>
+              <li class=""><a href="/html/boka.html" class="">Boka bord</a></li>
+              <li class=""><a href="/html/kontakt.html#hitta" class="">Hitta hit</a></li>
+              <li class=""><a href="/html/om_oss.html" class="">Om oss</a></li>
+              <li class=""><a href="/html/recept.html" class="">Recept</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <main>
-        <article id="recept" class="main-element">
-            <section>
-              <h1>Ekströms lekfulla recept</h1>
-              <p>Vi på Ekströms Mums drivs inte bara av att kunna erbjuda kvalitativa rätter för våra kunder. Vi vill också göra det enkelt för alla nyfikna att på egenhand kunna laga fantastiska rätter med ingredienser från Ekströms fantastiska sortiment.</p>
-            </section>
+        <div id="recept" class="main-element-left">
+          <section>
+            <h1>Ekströms lekfulla recept</h1>
+            <p>Vi på Ekströms Mums drivs inte bara av att kunna erbjuda kvalitativa rätter för våra kunder. Vi vill också göra det enkelt för alla nyfikna att på egenhand kunna laga fantastiska rätter med ingredienser från Ekströms fantastiska sortiment.</p>
+          </section>
+          
+          <div class="grid">
+            <a href="recept/kryddstekt-anka.html" class="recipe-link">
+              <div class="recipe-container">
+                  <img src="/images/ratter/recept/kryddstekt-anka.webp" alt="Kryddstekt Anka med Aprikossås och Äpplechutney upplagd på en tallrik i ett grönt kök" >
+                  <div class="text-overlay">
+                      <p>Kryddstekt Anka med Aprikossås och Äpplechutney<br>
+                      <strong>Innehåller:</strong> Ekströms Aprikoskräm Orginal och Ekströms Äpplekräm Extra Prima</p>
+                  </div>
+              </div>
+            </a>
             
-            <div class="grid">
-              <a href="recept/kryddstekt-anka.html" class="recipe-link">
-                <div class="recipe-container">
-                    <img src="/images/ratter/recept/kryddstekt-anka.webp" alt="Kryddstekt Anka med Aprikossås och Äpplechutney upplagd på en tallrik i ett grönt kök" width="256">
-                    <div class="text-overlay">
-                        <p>Kryddstekt Anka med Aprikossås och Äpplechutney<br>
-                        <strong>Innehåller:</strong> Ekströms Aprikoskräm Orginal och Ekströms Äpplekräm Extra Prima</p>
-                    </div>
+            <a href="recept/blabars-citronfromagetarta.html" class="recipe-link">
+              <div class="recipe-container">
+                <img src="/images/ratter/recept/blabars-citronfromagetarta.webp" alt="Blåbärs- och Citronfromagetårta upplagd på en tallrik i ett grönt kök" >
+                <div class="text-overlay">
+                    <p>Blåbärs- och Citronfromagetårta<br>
+                    <strong>Innehåller:</strong> Ekströms Blåbärskräm Extra Prima och Ekströms Citronfromage</p>
                 </div>
-              </a>
-              
-              <a href="recept/blabars-citronfromagetarta.html" class="recipe-link">
-                <div class="recipe-container">
-                    <img src="/images/ratter/recept/blabars-citronfromagetarta.webp" alt="Blåbärs- och Citronfromagetårta upplagd på en tallrik i ett grönt kök" width="256">
-                    <div class="text-overlay">
-                        <p>Blåbärs- och Citronfromagetårta<br>
-                        <strong>Innehåller:</strong> Ekströms Blåbärskräm Extra Prima och Ekströms Citronfromage</p>
-                    </div>
-                </div>
+              </div>
             </a>
             
             <a href="recept/choklad-brylepudding-parfait.html" class="recipe-link">
-                <div class="recipe-container">
-                    <img src="/images/ratter/recept/choklad-brylepudding-parfait.webp" alt="Choklad- och Brylépudding Parfait upplagd på en tallrik i ett grönt kök" width="256">
-                    <div class="text-overlay">
-                        <p>Choklad- och Brylépudding Parfait<br>
-                        <strong>Innehåller:</strong> Ekströms Chokladmousse med Crisp och Ekströms Brylépudding med Karamellsås</p>
-                    </div>
-                </div>
+              <div class="recipe-container">
+                  <img src="/images/ratter/recept/choklad-brylepudding-parfait.webp" alt="Choklad- och Brylépudding Parfait upplagd på en tallrik i ett grönt kök" >
+                  <div class="text-overlay">
+                      <p>Choklad- och Brylépudding Parfait<br>
+                      <strong>Innehåller:</strong> Ekströms Chokladmousse med Crisp och Ekströms Brylépudding med Karamellsås</p>
+                  </div>
+              </div>
             </a>
             
             <a href="recept/blabar-aprikos-smoothie.html" class="recipe-link">
-                <div class="recipe-container">
-                    <img src="/images/ratter/recept/blabar-aprikos-smoothie.webp" alt="Blåbär- och Aprikos Smoothie upplagd på en tallrik i ett grönt kök" width="256">
-                    <div class="text-overlay">
-                        <p>Blåbär- och Aprikos Smoothie<br>
-                        <strong>Innehåller:</strong> Ekströms Blåbärssoppa Orginal och Ekströms Aprikoskräm Orginal</p>
-                    </div>
-                </div>
+              <div class="recipe-container">
+                  <img src="/images/ratter/recept/blabar-aprikos-smoothie.webp" alt="Blåbär- och Aprikos Smoothie upplagd på en tallrik i ett grönt kök" >
+                  <div class="text-overlay">
+                      <p>Blåbär- och Aprikos Smoothie<br>
+                      <strong>Innehåller:</strong> Ekströms Blåbärssoppa Orginal och Ekströms Aprikoskräm Orginal</p>
+                  </div>
+              </div>
             </a>
           </div>
-        </article>      
+        </div>      
       </main>
 
       <footer>

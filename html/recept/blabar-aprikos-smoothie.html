@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ekströms Mums</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/js/menu.js" type="module"></script>
   </head>
 
   <body>
     <div id="root">
       <header>
         <div class="spacer-header wavy-header"></div>
-
         <div class="header-element">
-          <a class="header-title" href="/index.html">
-            Ekströms Mums
-            <!--<img src="images/logga-header.svg" alt="En glad kock med en slev i höger hand och en slickepott i vänster hand." width="256">-->
-          </a>
+          <a class="header-title" href="/index.html">Ekströms Mums</a>
           <nav class="header-nav">
             <ul class="button-list">
               <li class="button"><a href="/html/meny.html" class="button-link white-button">Meny</a></li>
@@ -27,18 +25,32 @@
               <li class="button"><a href="/html/recept.html" class="button-link white-button">Recept</a></li>
             </ul>
           </nav>
-        </div>  
+          <div class="menu-icon">
+            <img src="/images/menu.png" alt="Menu Icon">
+          </div>
+        </div>
+        <div class="overlay" id="overlay">
+          <nav class="overlay-nav">
+            <ul class="overlay-button-list">
+              <li class=""><a href="/html/meny.html" class="">Meny</a></li>
+              <li class=""><a href="/html/boka.html" class="">Boka bord</a></li>
+              <li class=""><a href="/html/kontakt.html#hitta" class="">Hitta hit</a></li>
+              <li class=""><a href="/html/om_oss.html" class="">Om oss</a></li>
+              <li class=""><a href="/html/recept.html" class="">Recept</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <main>
-        <article class="main-element recept-page">
+        <div class="main-element-left recept-page">
           <section>
             <h1>Recept: Blåbär- och Aprikos Smoothie</h1>
             <p><strong>Innehåller:</strong> Ekströms Blåbärssoppa Orginal och Ekströms Aprikoskräm Orginal</p>
           </section>
           
-          <section class="grid">
-            <div>
+          <div class="grid">
+            <section>
               <h2>Ingredienser</h2>
               <ul>
                   <li>2 dl Ekströms Blåbärssoppa Orginal</li>
@@ -47,8 +59,8 @@
                   <li>1 dl naturell yoghurt</li>
                   <li>Isbitar (valfritt)</li>
               </ul>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h2>Instruktioner</h2>
                 <ol>
                     <li>Skala bananen och skär den i skivor.</li>
@@ -58,12 +70,12 @@
                     <li>Mixa allt tills du får en slät och krämig konsistens.</li>
                     <li>Häll upp smoothien i ett glas och servera genast.</li>
                 </ol>
-            </div>
-          </section>
+            </section>
+          </div>
 
           <img src="/images/ratter/recept/blabar-aprikos-smoothie.webp" alt="Blåbär- och Aprikos Smoothie upplagd på en tallrik i ett grönt kök" width="256">
 
-        </article>        
+        </div>        
       </main>
 
       <footer>

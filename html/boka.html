@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ekströms Mums</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/js/menu.js" type="module"></script>
   </head>
   
   <body>
     <div class="root">
       <header>
         <div class="spacer-header wavy-header"></div>
-
         <div class="header-element">
-          <a class="header-title" href="/index.html">
-            Ekströms Mums
-            <!--<img src="images/logga-header.svg" alt="En glad kock med en slev i höger hand och en slickepott i vänster hand." width="256">-->
-          </a>
+          <a class="header-title" href="/index.html">Ekströms Mums</a>
           <nav class="header-nav">
             <ul class="button-list">
               <li class="button"><a href="/html/meny.html" class="button-link white-button">Meny</a></li>
@@ -27,44 +25,57 @@
               <li class="button"><a href="/html/recept.html" class="button-link white-button">Recept</a></li>
             </ul>
           </nav>
-        </div>  
+          <div class="menu-icon">
+            <img src="/images/menu.png" alt="Menu Icon">
+          </div>
+        </div>
+        <div class="overlay" id="overlay">
+          <nav class="overlay-nav">
+            <ul class="overlay-button-list">
+              <li class=""><a href="/html/meny.html" class="">Meny</a></li>
+              <li class=""><a href="/html/boka.html" class="">Boka bord</a></li>
+              <li class=""><a href="/html/kontakt.html#hitta" class="">Hitta hit</a></li>
+              <li class=""><a href="/html/om_oss.html" class="">Om oss</a></li>
+              <li class=""><a href="/html/recept.html" class="">Recept</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <main>
-        <article class="main-element">
-          <section id="boka">
-            <div>
-              <h1>Boka bord hos Ekströms Mums</h1>
-            </div>
-            <div class="form">
-              <form action="/submit" method="post">
-                <div class="field">
-                  <input type="text" id="name" name="name" placeholder="Namn" required>
-                </div>
-                
-                <div class="field">
-                  <input type="email" id="email" name="email" placeholder="E-post" required>
-                </div>
-          
-                <div class="field">
-                  <input type="tel" id="phone" name="phone" placeholder="Telefonnummer" required>
-                </div>
-          
-                <div class="field-group">
-                  <input type="date" id="date" name="date" required>
-                  <input type="time" id="time" name="time" required>
-                  <input type="number" id="guests" name="guests" min="1" max="20" placeholder="Antal Gäster" required>
-                </div>
-          
-                <div class="field">
-                  <textarea id="message" name="message" rows="4" cols="50" placeholder="Önskemål"></textarea>
-                </div>
-                
-                <input type="submit" value="Boka Bord">
-              </form>
-            </div>
+        <div id="boka" class="main-element-left">
+          <section>
+            <h1>Boka bord hos Ekströms Mums</h1>
+            <p>Här kan du boka ditt besök hos oss. Tänk på att vi accepterar endast bokningar som inkommit kl 17:00 dagen innan.</p>
           </section>
-        </article>
+          <div class="form">
+            <form action="/submit" method="post">
+              <div class="field">
+                <input type="text" id="name" name="name" placeholder="Namn" required>
+              </div>
+              
+              <div class="field">
+                <input type="email" id="email" name="email" placeholder="E-post" required>
+              </div>
+        
+              <div class="field">
+                <input type="tel" id="phone" name="phone" placeholder="Telefonnummer" required>
+              </div>
+        
+              <div class="field-group">
+                <input type="date" id="date" name="date" required>
+                <input type="time" id="time" name="time" required>
+                <input type="number" id="guests" name="guests" min="1" max="20" placeholder="Antal Gäster" required>
+              </div>
+        
+              <div class="field">
+                <textarea id="message" name="message" rows="4" cols="50" placeholder="Önskemål"></textarea>
+              </div>
+              
+              <input type="submit" value="Boka Bord">
+            </form>
+          </div>
+        </div>
       </main>
 
       <footer>
