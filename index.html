@@ -1,135 +1,215 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekströms Mums</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nordtrip - Unika småskaliga resor i Norden och Världen</title>
+    <meta name="description" content="Upptäck unika resor i Norden och Världen med Nordtrip. Vi arrangerar äventyrsresor till Senja (Norge), Gudauri (Georgien) och andra ovanliga destinationer med hållbarhet i fokus. Småskaliga gruppäventyr för dem som aldrig vill sluta upptäcka." />
+    <meta name="keywords" content="Unika resor i Norden Sverige Världen, hållbara resor, tågresor, ingen vinter utan snö, autentiska naturupplevelser, ovanliga resor, äventyr Skandinavien och Världen, nordiska resor, Senja, Gudauri, skidturer, topptur, naturupplevelser, resebyrå Sverige, Nordtrip" />
+    <meta name="author" content="Nordtrip" />
+    <link rel="canonical" href="https://nordtrip.se/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nordtrip.se/" />
+    <meta property="og:title" content="Nordtrip - Unika resor i Norden och Världen" />
+    <meta property="og:description" content="Upptäck unika resor i Norden och Världen med Nordtrip. Vi arrangerar äventyrsresor till Senja, Gudauri och andra ovanliga destinationer." />
+    <meta property="og:image" content="https://nordtrip.se/assets/media/images/senja/senja-display.jpg" />
+    <meta property="og:locale" content="sv_SE" />
+    <meta property="og:site_name" content="Nordtrip" />
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+    <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+    <meta name="theme-color" content="#5995ED" />
 
-    <script src="/js/renderdata.js" type="module"></script>
-    <script src="js/menu.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="/assets/media/videos/startpage-video.webm"
+      as="video"
+      type="video/webm"
+    />
+
+    <link rel="stylesheet" href="/assets/styles/reset.css" />
+    <link rel="stylesheet" href="/assets/styles/root.css" />
+    <link rel="stylesheet" href="/assets/styles/base.css" />
+    <link rel="stylesheet" href="/assets/styles/components.css" />
+    <link rel="stylesheet" href="/assets/styles/header.css" />
+    <link rel="stylesheet" href="/assets/styles/footer.css" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+
+    <script src="/assets/scripts/main.js" type="module"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Nordtrip",
+      "description": "En resebyrå som specialiserar unika och ovanliga resor i Norden och Världen",
+      "url": "https://nordtrip.se",
+      "logo": "https://nordtrip.se/assets/media/logo/logo-blue-circle.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+46-702-575743",
+        "contactType": "customer service",
+        "email": "info@nordtrip.se",
+        "availableLanguage": "Swedish"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SE"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/nordtripab",
+        "https://instagram.com/nordtripse",
+        "https://facebook.com/nordtripse"
+      ],
+      "foundingDate": "2018",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Sweden"
+      },
+      "serviceType": [
+        "Äventyrsresor",
+        "Hållbara resor",
+        "Skidturer",
+        "Topptur",
+        "Naturupplevelser",
+        "Gruppäventyr"
+      ]
+    }
+    </script>
   </head>
-  <body>
-    <div class="root">
-      <header>
-        <div class="spacer-header wavy-header"></div>
-        <div class="header-element">
-          <a class="header-title" href="/index.html">Ekströms Mums</a>
-          <nav class="header-nav">
-            <ul class="button-list">
-              <li class="button"><a href="/html/meny.html" class="button-link white-button">Meny</a></li>
-              <li class="button"><a href="/html/boka.html" class="button-link white-button">Boka bord</a></li>
-              <li class="button"><a href="/html/kontakt.html#hitta" class="button-link white-button">Hitta hit</a></li>
-              <li class="button"><a href="/html/om_oss.html" class="button-link white-button">Om oss</a></li>
-              <li class="button"><a href="/html/recept.html" class="button-link white-button">Recept</a></li>
-            </ul>
-          </nav>
-          <div class="menu-icon">
-            <img src="/images/menu.png" alt="Menu Icon">
-          </div>
-        </div>
-        <div class="overlay" id="overlay">
-          <nav class="overlay-nav">
-            <ul class="overlay-button-list">
-              <li class=""><a href="/html/meny.html" class="">Meny</a></li>
-              <li class=""><a href="/html/boka.html" class="">Boka bord</a></li>
-              <li class=""><a href="/html/kontakt.html#hitta" class="">Hitta hit</a></li>
-              <li class=""><a href="/html/om_oss.html" class="">Om oss</a></li>
-              <li class=""><a href="/html/recept.html" class="">Recept</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
 
-      <main>
-        <div id="startsida" class="main-wrapper">
-          <div class="">
-            <div id="slogan" class="main-element-center">
-              <section>
-                <h1>Välkommen till Ekströms Mums!</h1>
-                <p>
-                  Ekströms Mums är en hyllningsresturang till Ekströms alla goda produkter. All vår mat innehåller åtminstone en ingrediens från Ekströms sortiment.
-                </p>
-
-                <strong id="prognos">Väderprognos check!</strong>
-                <div id="weather-container">
-                  <div id="weather">
-                    <img id="weather-icon" src="/images/clouds.png" alt="Nuvarande vädersymbol">
-                    <p id="temperature"></p>
-                  </div>
-                    <p id="weather-message"></p>
-                </div>
-              
-                <ul class="button-list">
-                  <li class="button"><a class="button-link red-button" href="html/boka.html">Boka bord</a></li>
-                  <li class="button"><a class="button-link red-button" href="html/kontakt.html">Kontakta</a></li>
-                </ul>
-              </section>
+  <body class="page-home theme-dark">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__inner">
+          <a
+            class="header__section--left"
+            href="/"
+            aria-label="Navigate to homepage"
+          >
+            <div class="logo logo--circle">
+              <svg
+                width="36px"
+                height="36px"
+                viewBox="0 0 36 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="18" cy="18" r="18" fill="#5995ED" />
+              </svg>
             </div>
-          </div>
-          
-          <div class="spacer wavy-top"></div>
-
-          <div class="red">
-            <div class="main-element-center ">
-              <div id="inspiration" class="grid">
-                <div>
-                  <img src="images/ratter/specialratter/blabars-wasabikram.webp" alt="Blåbärs- och Wasabikräm med Karamelliserad Blomkål." width="256">
-                </div>
-                <div>
-                  <section id="inspirationsrecept">
-                    <h2>Ekströms Mums inspirationsrecept</h2>
-                    <p>
-                      På Ekströms Mums är alla recept inspirerade av produkter från Ekströms sortiment. Under sidan Recept har vi samlat några av våra favoriter som är enkla att pröva hemma tillsammans med barnen eller sambon. Recepten kräver inga större förkunskaper utan ska enkelt gå att följa med hjälp av vår steg-för-steg guide.
-                    </p>
-                    <ul class="button-list">
-                      <li class="button"><a class="button-link white-button" href="html/recept.html">Utforska våra recept</a></li> 
-                    </ul>
-                  </section>
-                </div>
-              </div>
+            <div class="logo logo--long">
+              <svg
+                width="36px"
+                height="36px"
+                viewBox="0 0 36 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="18" cy="18" r="18" fill="#5995ED" />
+              </svg>
+              <span class="logo__text">nordtrip</span>
             </div>
-          </div>
-          
-          <div class="spacer wavy-bottom"></div>
-
-          <div class="">
-            <div id="varhistoria" class="main-element-center">
-              <section>
-                <h2>Vår historia</h2>
-                <p>
-                  Ekströms Mums föddes ur en kärlek till familjens samlade matminnen och en passion för lekfull kreativitet i köket. Med en vision att skapa goda maträtter som kittlar både barnasinnet och smaklökarna, har vi samlat Ekströms finaste ingredienser och låtit fantasin flöda.
-                </p>
-                <ul class="button-list">
-                  <li class="button"><a class="button-link red-button" href="html/om_oss.html">Läs mer om vår historia</a></li>
-                </ul>
-              </section>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <footer>
-        <div class="footer-element">
-          <div>
-            <p>&copy; 2024 Ekströms Mums. All rights reserved.</p>
-            <a href="html/meny.html">Meny</a>
-            <a href="html/kontakt.html">Kontakta oss</a>
-            <a href="html/kontakt.html#hitta">Hitta oss</a>
-          </div>
-
-          <a class="center-logo" href="index.html">
-            <img src="images/logga.svg" alt="En glad kock med en slev i höger hand och en slickepott i vänster hand." width="128">
           </a>
 
-          <div>
-              <p>Adress: Granhäcksvägen 14, Surte, Västra Götaland, 445 55</p>
-              <p>Telefon: (+46)70-257 57 43</p>
-              <p>Epostadress: <a href="mailto:info@mums.se">info@mums.se</a></p>
+          <nav class="header__section--right">
+            <button class="menu__toggle" aria-label="Open menu">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="6" y="9" width="20" height="2" fill="currentColor" />
+                <rect x="6" y="15" width="20" height="2" fill="currentColor" />
+                <rect x="6" y="21" width="20" height="2" fill="currentColor" />
+              </svg>
+            </button>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Menu Overlay -->
+      <div class="menu__overlay"></div>
+
+      <!-- Expanded Menu -->
+      <div class="menu__expanded">
+        <nav class="menu__nav">
+          <a href="/resor/kommande-resor/" class="menu__item">Kommande Resor</a>
+          <a href="/resor/tidigare-resor/" class="menu__item">Tidigare Resor</a>
+          <a href="/om-oss/" class="menu__item">Om oss</a>
+          <a href="/om-oss/kontakt/" class="menu__item">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__video-container">
+          <video
+            class="hero__video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="/assets/media/videos/startpage-frame.webp"
+          >
+            <source
+              src="/assets/media/videos/startpage-video.webm"
+              type="video/webm"
+            />
+            <source
+              src="/assets/media/videos/startpage-video.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="hero__overlay"></div>
+        </div>
+
+        <div class="hero__content">
+          <div class="hero__text">
+            <h1 class="hero__title">Välkommen till Nordtrip</h1>
+            <p class="hero__subtitle">
+              En resebyrå för dem som aldrig vill sluta upptäcka.
+            </p>
+          </div>
+          <div class="hero__actions">
+            <a
+              href="/resor/kommande-resor/"
+              class="btn btn--primary btn--inline"
+            >
+              <span class="btn__content">Kommande resor</span>
+              <span class="btn__shadow"></span>
+            </a>
+            <a
+              href="/resor/tidigare-resor/"
+              class="btn btn--secondary btn--inline"
+            >
+              <span class="btn__content">Tidigare resor</span>
+              <span class="btn__shadow"></span>
+            </a>
           </div>
         </div>
-      </footer>
-    </div>
+      </section>
+    </main>
+
+    <footer></footer>
   </body>
 </html>

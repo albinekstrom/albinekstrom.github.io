@@ -1,0 +1,36 @@
+:root {
+  /* Brand Colors */
+  --brand-blue: #5995ed;
+  --brand-orange: #ffa737;
+
+  /* Background Colors */
+  --bg-color-light: #ffffff;
+  --bg-color-dark: #17100e;
+  --bg-color-grey: #f4f3ec;
+
+  /* Text Colors */
+  --text-color-light: #ffffff;
+  --text-color-dark: #17100e;
+  --text-color-muted: rgba(255, 255, 255, 0.6);
+
+  /* Button Colors */
+  --btn-bg-primary: #17100e;
+  --btn-bg-secondary: #ffffff;
+  --btn-bg-hover: #d5d5d5;
+  --btn-bg-blue: #5995ed;
+
+  /* Other Colors */
+  --shadow-color: rgba(23, 16, 14, 0.2);
+
+  /* Font Variables */
+  --text-font: "Josefin Sans", sans-serif;
+  --heading-font: "EB Garamond", serif;
+
+  /* Spacing */
+  --space-small: 0.5rem;
+  --space-medium: 1rem;
+  --space-large: 1.5rem;
+  --space-container: 7.5rem;
+  --rounded: 0.5rem;
+  --font-size-base: 1rem;
+}
