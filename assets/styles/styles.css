@@ -212,7 +212,7 @@
 }
 
 .trip-card:hover {
-  transform: translateY(-2px);
+  cursor: pointer;
 }
 
 .trip-card__place {
@@ -239,10 +239,6 @@
   display: block;
   border-radius: 4px;
   transition: transform 0.2s ease;
-}
-
-.trip-card:hover .trip-card__image {
-  transform: scale(1.02);
 }
 
 /* Placeholder image styling for future trips */
@@ -546,7 +542,8 @@
 .description-text {
   width: calc(100% - 344px);
   text-wrap: wrap;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  line-height: normal;
   margin-bottom: 1rem;
 }
 
@@ -597,7 +594,7 @@
   }
 
   .description-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .description-tags {
@@ -688,38 +685,62 @@
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
-  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.gallery-item {
+.gallery-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.gallery-slot {
   position: relative;
   overflow: hidden;
   border-radius: 4px;
-  min-height: 250px;
+  background: #f8f9fa;
 }
 
-.gallery-item--horizontal {
-  grid-column: 1 / -1;
-  min-height: 300px;
+.gallery-slot--vertical {
+  /* Takes 1 column (default) */
 }
 
-.gallery-item--vertical {
-  min-height: 400px;
+.gallery-slot--horizontal {
+  grid-column: 1 / -1; /* Takes full width (2 columns) */
+}
+
+.gallery-slot--empty {
+  display: none; /* Hide empty slots */
 }
 
 .gallery-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
-  border-radius: 4px;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  pointer-events: none;
+  display: block;
+}
+
+.gallery-image--rotate-left {
+  transform: rotate(-90deg);
+}
+
+/* Picture element styling */
+.gallery-slot picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-slot source,
+.gallery-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .gallery-placeholder {
@@ -733,7 +754,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 4px;
   min-height: inherit;
 }
 
@@ -757,12 +778,8 @@
     gap: 1rem;
   }
 
-  .gallery-item--vertical {
-    min-height: 300px;
-  }
-
-  .gallery-item--horizontal {
-    min-height: 250px;
+  .gallery-row {
+    gap: 1rem;
   }
 
   .page-tidigare-resor .trip__aside {
@@ -793,16 +810,15 @@
   }
 
   .gallery-grid {
-    grid-template-columns: 1fr;
+    gap: 1rem;
   }
-
-  .gallery-item--horizontal {
-    grid-column: 1;
-    min-height: 250px;
+  
+  .gallery-row {
+    gap: 1rem;
   }
-
-  .gallery-item--vertical {
-    min-height: 300px;
+  
+  .gallery-slot--horizontal {
+    grid-column: 1 / -1; /* Still takes full width on mobile */
   }
 }
 
