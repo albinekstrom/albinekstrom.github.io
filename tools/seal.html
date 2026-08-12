@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'">
+<meta name="robots" content="noindex, nofollow">
+<title>Seal the link list</title>
+<link rel="stylesheet" href="../css/landing.css">
+<style>
+  .stage{justify-content:flex-start;gap:18px;max-width:720px;margin:0 auto;text-align:left;align-items:stretch}
+  h1{font-size:22px;letter-spacing:-.01em;margin:0}
+  p{font-size:13px;color:var(--slate);line-height:1.6;margin:0}
+  label{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin:14px 0 5px}
+  input,textarea{
+    width:100%;font-family:var(--mono);font-size:14px;padding:11px 13px;
+    background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:2px;
+  }
+  textarea{min-height:150px;resize:vertical;line-height:1.5}
+  button{
+    font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    background:var(--ink);color:var(--ice);border:0;border-radius:2px;padding:13px 18px;
+    cursor:pointer;min-height:44px;
+  }
+  button.ghost{background:transparent;color:var(--slate);border:1px solid var(--line)}
+  .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+  .out{font-size:12px;min-height:120px}
+  .ok{color:var(--frost)}
+  .bad{color:var(--signal)}
+  code{background:rgba(127,179,204,.14);padding:1px 5px;border-radius:2px}
+</style>
+</head>
+<body>
+<main class="stage">
+
+  <h1>Seal the link list</h1>
+  <p>
+    Everything here happens in this browser. The passphrase is never sent anywhere, never
+    written to the repo and never stored — only what it encrypts is. Choose a passphrase you
+    will still remember in February, because there is no reset: if you lose it, reseal with a
+    new one from this page.
+  </p>
+
+  <label for="pass">Passphrase</label>
+  <input type="password" id="pass" autocomplete="new-password" autocapitalize="none" spellcheck="false">
+
+  <label for="again">Passphrase again</label>
+  <input type="password" id="again" autocomplete="new-password" autocapitalize="none" spellcheck="false">
+
+  <label for="payload">Link list (JSON)</label>
+  <textarea id="payload" spellcheck="false"></textarea>
+
+  <div class="row">
+    <button id="seal" type="button">Seal</button>
+    <button class="ghost" id="download" type="button" hidden>Download links.enc</button>
+    <button class="ghost" id="copy" type="button" hidden>Copy</button>
+  </div>
+
+  <p class="msg" id="msg" role="status" aria-live="polite"></p>
+
+  <label for="out">links.enc</label>
+  <textarea class="out" id="out" readonly spellcheck="false"></textarea>
+
+  <p>
+    Save it as <code>data/links.enc</code> in this repo, commit, push. Then open the site,
+    enter the passphrase, and check the red placeholder warning is gone.
+  </p>
+
+</main>
+
+<script type="module" src="seal.js"></script>
+</body>
+</html>

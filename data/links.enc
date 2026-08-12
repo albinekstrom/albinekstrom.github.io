@@ -1,0 +1,12 @@
+{
+  "v": 1,
+  "placeholder": true,
+  "kdf": {
+    "name": "PBKDF2",
+    "hash": "SHA-256",
+    "iterations": 250000,
+    "salt": "1DUVvetZLTQy8YXly6x/Ng=="
+  },
+  "iv": "dFwmD4u1WX/ZJXM5",
+  "ct": "tFIVT9Sx1Lo4NvH924ZvxpN8YSTNEvWIejGNzAZMZctasrv5PFPStrKuCwRRWc0v+PU/Gb012KINM06QdBYoRKDRobh2S6ziBA90EP1Dd0aaOj2kflTigdhu3mXRUemsjU+ykD6YRPo4HhPXHCiXsvkDtJzo1gm59byn0jIuXagL6Gg5dsNUArNcY9M="
+}

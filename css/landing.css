@@ -1,0 +1,142 @@
+/* ============================================================
+   Landing page. One thing in the middle of the screen.
+   Palette borrowed from the hm-2027 tracker so the two feel
+   like one system.
+   ============================================================ */
+
+:root{
+  --ice:#E9EEF1;
+  --ink:#15242C;
+  --slate:#4C6070;
+  --mute:#7A8D99;
+  --line:#CBD8DF;
+  --frost:#2C6C8C;
+  --signal:#A93526;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+}
+
+@media (prefers-color-scheme:dark){
+  :root{
+    --ice:#101A20;
+    --ink:#E6EDF1;
+    --slate:#9DB0BC;
+    --mute:#6F8593;
+    --line:#26343D;
+    --frost:#7FB3CC;
+  }
+}
+
+*{box-sizing:border-box}
+
+html,body{height:100%}
+
+body{
+  margin:0;
+  background:var(--ice);
+  color:var(--ink);
+  font-family:var(--mono);
+  -webkit-font-smoothing:antialiased;
+  -webkit-text-size-adjust:100%;
+}
+
+/* Dead centre, at every size. */
+.stage{
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:38px;
+  padding:
+    calc(32px + env(safe-area-inset-top))
+    max(24px, env(safe-area-inset-right))
+    calc(32px + env(safe-area-inset-bottom))
+    max(24px, env(safe-area-inset-left));
+  text-align:center;
+}
+
+.name{
+  margin:0;
+  font-size:clamp(38px, 11vw, 104px);
+  font-weight:600;
+  letter-spacing:-.035em;
+  line-height:.95;
+}
+
+/* ---------- the gate ---------- */
+.gate{display:flex;flex-direction:column;align-items:center;gap:12px;width:100%;max-width:320px}
+.gate[hidden]{display:none}
+
+.gatelab{
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);
+}
+.gaterow{display:flex;gap:8px;width:100%}
+
+#pass{
+  flex:1 1 auto;min-width:0;
+  font-family:var(--mono);font-size:16px;letter-spacing:.18em;
+  padding:12px 14px;min-height:48px;
+  background:transparent;color:var(--ink);
+  border:1px solid var(--line);border-radius:2px;
+}
+#pass:focus-visible,.go:focus-visible,.lock:focus-visible,.links a:focus-visible{
+  outline:2px solid var(--frost);outline-offset:2px;
+}
+
+.go{
+  flex:0 0 48px;min-height:48px;
+  font-family:var(--mono);font-size:17px;line-height:1;
+  background:var(--ink);color:var(--ice);
+  border:0;border-radius:2px;cursor:pointer;
+}
+.go[disabled]{opacity:.45;cursor:default}
+
+.remember{
+  display:flex;align-items:center;gap:8px;
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);cursor:pointer;
+}
+.remember input{width:15px;height:15px;margin:0;accent-color:var(--frost)}
+
+.msg{
+  margin:0;min-height:1.2em;
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);
+}
+.msg.bad{color:var(--signal)}
+
+/* ---------- the links ---------- */
+.links{display:flex;flex-direction:column;gap:4px;width:100%;max-width:560px}
+.links[hidden]{display:none}
+
+.links a{
+  display:block;padding:14px 8px;
+  color:var(--ink);text-decoration:none;
+  border-bottom:1px solid var(--line);
+  transition:color .12s;
+}
+.links a:first-child{border-top:1px solid var(--line)}
+.links a:hover,.links a:focus-visible{color:var(--frost)}
+
+.links .ttl{
+  display:block;font-size:clamp(26px, 6vw, 44px);font-weight:600;letter-spacing:-.02em;line-height:1.05;
+}
+.links .note{
+  display:block;margin-top:5px;
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);
+}
+
+.lock{
+  font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  background:none;color:var(--mute);border:0;padding:8px 12px;cursor:pointer;min-height:44px;
+}
+.lock:hover{color:var(--ink)}
+.lock[hidden]{display:none}
+
+.warn{
+  font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--signal);border:1px solid var(--signal);border-radius:2px;
+  padding:8px 12px;margin:0;max-width:420px;line-height:1.5;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+}
