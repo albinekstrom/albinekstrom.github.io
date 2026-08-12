@@ -9,8 +9,7 @@ index.html            the page
 css/landing.css       palette shared with hm-2027
 js/landing.js         decrypts the link list
 data/links.enc        the link list, encrypted
-tools/seal.html       set the passphrase and reseal the list — run it locally
-tools/seal.js
+tools/seal.html       set the passphrase and reseal the list — one self-contained file
 ```
 
 ## The passphrase
@@ -36,11 +35,27 @@ a page like this one is not.
 The repo ships sealed with the placeholder `change-me`, and the page shows a red warning while
 that is still in use. To replace it:
 
-1. Open `tools/seal.html` — locally is fine, `file://` works, nothing is sent anywhere.
+1. Open `tools/seal.html`. Double-clicking it in Finder is enough — it is one self-contained file
+   with no imports, so it needs no server. If your browser will not run it from disk, serve the
+   folder instead:
+
+   ```
+   cd ~/Developer/albinekstrom.github.io && python3 -m http.server 8788
+   ```
+
+   then open <http://localhost:8788/tools/seal.html>.
+
 2. Enter a passphrase twice, edit the link list if you want.
-3. Press **Seal**, then **Download links.enc**.
+3. Press **Seal**, then **Download links.enc** — or copy the text out of the box, which holds the
+   same bytes if the download is refused.
 4. Save it over `data/links.enc`, commit, push.
 5. Load the site, enter the new passphrase, check the red warning is gone.
+
+The page declares `default-src 'none'`, so it is incapable of making a network request of any
+kind — no fetch, no XHR, no beacon, no image ping. You can run it with the wifi off and it behaves
+identically. That is also why everything is inlined into the one file rather than imported: an
+imported module cannot load from `file://`, and a page that needs a server to run is a page you
+have to trust differently.
 
 The passphrase is never stored, never committed and never transmitted — only what it encrypts is.
 There is no reset: if you forget it, reseal with a new one from that same page.
